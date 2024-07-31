@@ -1,5 +1,6 @@
 import profileImage from "../assets/ProfileImage.jpg";
 import Menu from "../assets/list.svg";
+import ProfileCard from "./Cards/ProfileCard";
 
 const HomePage = () => {
   const user = "Jeffrey";
@@ -31,10 +32,12 @@ const HomePage = () => {
           </span>
         </h2>
       </div>
-      <div>
+      <div className="mb-3">
         <h2 className="text-md font-semibold text-custom-text">Overview</h2>
       </div>
-      <div className="flex justify-center items-center"></div>
+      <div className="flex justify-center items-center">
+        <ProfileCard />
+      </div>
     </>
   );
 };
