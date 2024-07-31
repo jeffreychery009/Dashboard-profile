@@ -4,8 +4,15 @@ export default {
 
   theme: {
     extend: {
+      screens: {
+        "custom-mobile": { min: "320px", max: "480px" },
+        "custom-tablet": { min: "481px", max: "768px" },
+        "custom-desktop": { min: "769px" },
+      },
+
       spacing: {
-        "mb-13": "3.25rem",
+        4: "1.25rem",
+        5: "3.125rem",
         "input-width": "21.875rem",
         "input-height": "2.5rem",
       },
@@ -27,12 +34,13 @@ export default {
         "card-padding": "1rem",
         profile: "1.5rem", //Custom padding for profile elements
         paddingX: "1.25rem", // Custom padding for left and right
-        "padding-top": "3.75rem", // Custom padding for top
-        "padding-bottom": "1.875rem", // Custom padding for bottom
+        "padding-top": "1.25rem", // Custom padding for top
+        "padding-bottom": "1.25rem", // Custom padding for bottom
       },
 
       colors: {
         "custom-bg": "#F7F7F7",
+        "custom-text": "#767474",
       },
 
       // Custom font-size
