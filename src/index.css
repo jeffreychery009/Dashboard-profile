@@ -5,4 +5,19 @@
 
 body {
   @apply bg-custom-bg;
+  @apply p-padding-top;
+  @apply p-padding-bottom;
+  @apply p-paddingX;
+}
+
+.h1-style {
+  @apply text-lg font-semibold bg-blue-gradient bg-clip-text bg-transparent text-transparent;
+}
+
+.card-style {
+  @apply h-card-h w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
+}
+
+.search-input {
+  @apply w-input-width h-input-height rounded-input-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
 }
