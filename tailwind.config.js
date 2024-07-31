@@ -11,6 +11,7 @@ export default {
       },
 
       spacing: {
+        3: "1rem",
         4: "1.25rem",
         5: "3.125rem",
         "input-width": "21.875rem",
@@ -18,7 +19,7 @@ export default {
       },
 
       width: {
-        "card-w": "21.875.rem",
+        "card-w": "21.875rem",
       },
 
       height: {
@@ -45,6 +46,7 @@ export default {
 
       // Custom font-size
       fontSize: {
+        ui: "0.875rem",
         xs: ".75rem",
         sm: "1.25rem",
         md: "1.375rem",
