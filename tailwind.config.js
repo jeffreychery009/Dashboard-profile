@@ -19,7 +19,7 @@ export default {
       },
 
       width: {
-        "card-w": "21.875rem",
+        "card-w": "100%",
       },
 
       height: {
