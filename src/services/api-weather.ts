@@ -2,7 +2,8 @@ import axios from "axios";
 
 // Defining WeatherPropsData interface
 
-interface WeatherPropsData {
+// Exporting the interface to be used in the HomePage component
+export interface WeatherPropsData {
   city: string;
   temperature: number;
   tempHighF: number;
@@ -31,9 +32,9 @@ export const getWeatherData = async (
       const data = res.data;
       const weatherData: WeatherPropsData = {
         city: data.location.name,
-        temperature: data.current.temp_c,
-        tempHighF: data.forecast.forecastday[0].day.maxtemp_f,
-        tempLowF: data.forecast.forecastday[0].day.mintemp_f,
+        temperature: Math.floor(data.current.temp_f),
+        tempHighF: Math.floor(data.forecast.forecastday[0].day.maxtemp_f),
+        tempLowF: Math.floor(data.forecast.forecastday[0].day.mintemp_f),
         condition: data.current.condition.text,
       };
       return weatherData;
