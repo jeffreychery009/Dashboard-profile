@@ -1,5 +1,6 @@
 import profileImage from "../assets/ProfileImage.jpg";
 import Menu from "../assets/list.svg";
+import NewsCard from "./Cards/NewsCard";
 import ProfileCard from "./Cards/ProfileCard";
 import WeatherCard from "./Cards/WeatherCard";
 
@@ -39,6 +40,7 @@ const HomePage = () => {
       <div className="flex justify-center items-center flex-wrap gap-4">
         <ProfileCard />
         <WeatherCard />
+        <NewsCard />
       </div>
     </>
   );

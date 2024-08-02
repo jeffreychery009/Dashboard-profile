@@ -12,6 +12,8 @@ const WeatherCard = () => {
           const { latitude, longitude } = position.coords;
           getWeatherData(latitude, longitude)
             .then((weatherData) => {
+              console.log(weather);
+
               setWeather(weatherData);
             })
             .catch(() => {
