@@ -1,6 +1,7 @@
 import profileImage from "../assets/ProfileImage.jpg";
 import Menu from "../assets/list.svg";
 import ProfileCard from "./Cards/ProfileCard";
+import WeatherCard from "./Cards/WeatherCard";
 
 const HomePage = () => {
   const user = "Jeffrey";
@@ -35,8 +36,9 @@ const HomePage = () => {
       <div className="mb-3">
         <h2 className="text-md font-semibold text-custom-text">Overview</h2>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center flex-wrap gap-4">
         <ProfileCard />
+        <WeatherCard />
       </div>
     </>
   );
