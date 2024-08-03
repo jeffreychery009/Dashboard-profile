@@ -2,6 +2,8 @@ import profileImage from "../assets/ProfileImage.jpg";
 import Menu from "../assets/list.svg";
 import NewsCard from "./Cards/NewsCard";
 import ProfileCard from "./Cards/ProfileCard";
+import SettingsCard from "./Cards/SettingsCard";
+import TodoListCard from "./Cards/TodoListCard";
 import WeatherCard from "./Cards/WeatherCard";
 
 const HomePage = () => {
@@ -41,7 +43,12 @@ const HomePage = () => {
         <ProfileCard />
         <WeatherCard />
         <NewsCard />
+        <TodoListCard />
+        <SettingsCard />
       </div>
+      <p className="text-center text-xs p-4 bg-blue-gradient bg-clip-text text-transparent">
+        Copyright © Dashboard.io
+      </p>
     </>
   );
 };

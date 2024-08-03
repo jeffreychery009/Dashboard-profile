@@ -16,6 +16,7 @@ export default {
         5: "3.125rem",
         "input-width": "21.875rem",
         "input-height": "2.5rem",
+        "input-add-height": "3.125rem",
       },
 
       width: {
@@ -27,6 +28,7 @@ export default {
       },
 
       borderRadius: {
+        "input-add-radius": "2.5rem",
         "input-radius": "1.875rem",
         "card-radius": ".75rem",
       },
