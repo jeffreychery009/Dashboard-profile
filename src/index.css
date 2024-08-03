@@ -21,3 +21,7 @@ body {
 .search-input {
   @apply w-input-width h-input-height rounded-input-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
 }
+
+.edit-input {
+  @apply w-input-width h-input-add-height rounded-input-add-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
+}
