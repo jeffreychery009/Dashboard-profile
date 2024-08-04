@@ -44,6 +44,7 @@ export default {
       colors: {
         "custom-bg": "#F7F7F7",
         "custom-text": "#767474",
+        "custome-active": "#D9D9D9",
       },
 
       // Custom font-size

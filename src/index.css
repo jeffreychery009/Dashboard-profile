@@ -25,3 +25,10 @@ body {
 .edit-input {
   @apply w-input-width h-input-add-height rounded-input-add-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
 }
+
+.list-active {
+  @apply bg-custome-active w-[100%] h-[52px] rounded-[16px];
+  display: flex;
+
+  align-items: center;
+}
