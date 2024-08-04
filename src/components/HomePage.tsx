@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import profileImage from "../assets/ProfileImage.jpg";
 import Menu from "../assets/list.svg";
 import NewsCard from "./Cards/NewsCard";
@@ -5,14 +6,38 @@ import ProfileCard from "./Cards/ProfileCard";
 import SettingsCard from "./Cards/SettingsCard";
 import TodoListCard from "./Cards/TodoListCard";
 import WeatherCard from "./Cards/WeatherCard";
+import Navigation from "./Navigation";
 
 const HomePage = () => {
   const user = "Jeffrey";
 
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  useEffect(() => {
+    if (isNavOpen) {
+      // Prevent background scroll
+      document.body.style.overflow = "hidden";
+    } else {
+      // Re-enable background scroll
+      document.body.style.overflow = "";
+    }
+
+    // Clean up by removing the overflow style when the component unmounts
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isNavOpen]);
+
   return (
     <>
       <div className="custom-mobile:flex justify-between items-center mb-5">
-        <img src={Menu} alt="" />
+        <button onClick={toggleNav}>
+          <img src={Menu} alt="" />
+        </button>
         <h1 className="h1-style text-center ">Dashboard.io</h1>
         <img
           className="w-[28px] h-[28px] rounded-full"
@@ -20,6 +45,8 @@ const HomePage = () => {
           alt=""
         />
       </div>
+      <Navigation isOpen={isNavOpen} toggleNav={toggleNav} />
+
       <div className="flex justify-center mb-5">
         <input
           className="search-input" // Added text-gray-300 class for light-grey text color
