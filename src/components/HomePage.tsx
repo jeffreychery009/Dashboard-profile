@@ -59,7 +59,7 @@ const HomePage = () => {
         <h2 className="text-md font-semibold py-1">
           Welcome to your{" "}
           <span className="bg-blue-gradient bg-clip-text text-transparent">
-            Dashboard
+            Dashboard.io
           </span>
         </h2>
       </div>
