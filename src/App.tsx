@@ -1,11 +1,5 @@
-import HomePage from "./components/HomePage";
-
 const App = () => {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default App;

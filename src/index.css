@@ -32,3 +32,31 @@ body {
 
   align-items: center;
 }
+
+.gradient-border-light {
+  padding: 1px; /* Adjust padding to match border width */
+  border-radius: 40px; /* Your desired border-radius */
+  background: linear-gradient(to right, #f11919, #fc8619);
+  width: 92px;
+}
+
+.gradient-border-light > .content {
+  background: white; /* Background color of the inner content */
+  border-radius: 40px; /* Same as border-radius minus border width */
+  padding: 8px; /* Your desired padding inside the element */
+  height: 40px;
+}
+
+.gradient-border-dark {
+  padding: 1px; /* Adjust padding to match border width */
+  border-radius: 40px; /* Your desired border-radius */
+  background: linear-gradient(to right, #0a42d4, #20a2d9);
+  width: 92px;
+}
+
+.gradient-border-dark > .content {
+  background: white; /* Background color of the inner content */
+  border-radius: 40px; /* Same as border-radius minus border width */
+  padding: 8px; /* Your desired padding inside the element */
+  height: 40px;
+}

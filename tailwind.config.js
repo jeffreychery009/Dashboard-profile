@@ -45,6 +45,7 @@ export default {
         "custom-bg": "#F7F7F7",
         "custom-text": "#767474",
         "custome-active": "#D9D9D9",
+        blue: "#0A42D4",
       },
 
       // Custom font-size
@@ -58,6 +59,8 @@ export default {
 
       backgroundImage: {
         "blue-gradient": "linear-gradient(to right, #0A42D4, #20A2D9)",
+        "light-gradient": "linear-gradient(to right, #F11919, #FC8619",
+        "dark-gradient": "linear-gradient(to right, #0a42d4, #20a2d9)",
       },
     },
   },

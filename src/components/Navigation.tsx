@@ -23,7 +23,12 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
         style={{ width: "100%" }}
       >
         <button onClick={toggleNav}>
-          <img src={x} alt="" style={{ width: "28px", height: "28px" }} />
+          <img
+            className="mt-2"
+            src={x}
+            alt=""
+            style={{ width: "28px", height: "28px" }}
+          />
         </button>
 
         <div className="mt-[140px]">

@@ -36,7 +36,7 @@ const HomePage = () => {
     <>
       <div className="custom-mobile:flex justify-between items-center mb-5">
         <button onClick={toggleNav}>
-          <img src={Menu} alt="" />
+          <img src={Menu} alt="menu icon" />
         </button>
         <h1 className="h1-style text-center ">Dashboard.io</h1>
         <img
