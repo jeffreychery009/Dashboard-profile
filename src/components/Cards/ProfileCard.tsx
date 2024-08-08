@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ProfileCard = () => {
   return (
     <>
@@ -8,7 +10,7 @@ const ProfileCard = () => {
             View your profile
           </p>
           <p className=" text-xs bg-blue-gradient bg-clip-text text-transparent">
-            Click to see more
+            <Link to="/profile">Click to see more</Link>
           </p>
         </div>
       </div>
