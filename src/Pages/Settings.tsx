@@ -2,10 +2,16 @@ import caretLeft from "../assets/caret-left.svg";
 import sun from "../assets/sun.svg";
 import moon from "../assets/moon.svg";
 import { Link } from "react-router-dom";
-import { FormEvent, useRef } from "react";
+import { FormEvent, useEffect, useRef } from "react";
 
 const Settings = () => {
+  useEffect(() => {
+    // Scroll to the top of the page when this component is mounted
+    window.scrollTo(0, 0);
+  }, []);
+
   const nameRef = useRef<HTMLInputElement>(null);
+
   const locationRef = useRef<HTMLInputElement>(null);
 
   const personalInfo = { name: "", location: "" };

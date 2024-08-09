@@ -44,3 +44,37 @@ export const getWeatherData = async (
       return error;
     });
 };
+
+// Defining a function for displaying multiple common cities weather
+
+export const getWeather = async (): Promise<WeatherPropsData[]> => {
+  const cities = ["New York", "Toronto", "Atlanta", "Dallas", "Vancouver"];
+  const apiKey = "2e7e17f091f9429aafe72537243107";
+
+  // Create an array of Promises for each city's weather data
+  const weatherPromises = cities.map(async (city) => {
+    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1`;
+
+    try {
+      const res = await axios.get(url);
+      const data = res.data;
+      const weatherData: WeatherPropsData = {
+        city: data.location.name,
+        temperature: Math.floor(data.current.temp_f),
+        tempHighF: Math.floor(data.forecast.forecastday[0].day.maxtemp_f),
+        tempLowF: Math.floor(data.forecast.forecastday[0].day.mintemp_f),
+        condition: data.current.condition.text,
+      };
+      return weatherData;
+    } catch (error) {
+      console.log(`Error fetching weather data for ${city}:`, error);
+      return null; // Return null if there's an error for a specific city
+    }
+  });
+
+  // Wait for all Promises to resolve
+  const weatherDataArray = await Promise.all(weatherPromises);
+
+  // Filter out any null values (i.e., cities that failed to fetch)
+  return weatherDataArray.filter((data) => data !== null) as WeatherPropsData[];
+};

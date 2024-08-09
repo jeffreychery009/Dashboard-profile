@@ -21,14 +21,14 @@ const NewsCard = () => {
   return (
     <>
       <div className="card-style">
-        <h3 className="text-sm font-medium mb-2">News</h3>
-        <h4 className="font-medium mb-3">Breaking News: {news?.title}</h4>
-        <a
-          className="text-xs bg-blue-gradient bg-clip-text text-transparent"
-          href="#"
-        >
-          <Link to="/news">Click for more</Link>
-        </a>
+        <Link to="/news">
+          <h3 className="text-sm font-medium mb-2">News</h3>
+          <h4 className="font-medium mb-3">Breaking News: {news?.title}</h4>
+          <a
+            className="text-xs bg-blue-gradient bg-clip-text text-transparent"
+            href="#"
+          ></a>
+        </Link>
       </div>
     </>
   );
