@@ -18,6 +18,10 @@ body {
   @apply h-card-h w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
 }
 
+.card-style-news {
+  @apply h-full w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300 overflow-hidden;
+}
+
 .card-style-profile {
   @apply h-[380px] w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
 }
