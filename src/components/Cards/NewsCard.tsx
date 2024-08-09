@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { NewsProps, getNews } from "../../services/api-news";
 import { useEffect, useState } from "react";
 
@@ -26,7 +27,7 @@ const NewsCard = () => {
           className="text-xs bg-blue-gradient bg-clip-text text-transparent"
           href="#"
         >
-          Click to read more
+          <Link to="/news">Click for more</Link>
         </a>
       </div>
     </>
