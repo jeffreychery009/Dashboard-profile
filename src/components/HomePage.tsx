@@ -34,7 +34,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="custom-mobile:flex justify-between items-center mb-5 custom-tablet:flex justify-between">
+      <div className="flex justify-between items-center mb-5 custom-tablet:flex ">
         <button onClick={toggleNav}>
           <img src={Menu} alt="menu icon" />
         </button>

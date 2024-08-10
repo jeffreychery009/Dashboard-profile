@@ -38,7 +38,7 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
           </h1>
         </div>
 
-        <div className="mt-[140px]  ">
+        <div className="mt-[140px]   ">
           <ul className="col-span-1 space-y-[52px]">
             <li className="flex">
               <img
