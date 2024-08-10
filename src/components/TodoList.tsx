@@ -36,7 +36,7 @@ const TodoList = () => {
       <>
         <div className="min-h-screen flex flex-col">
           <div>
-            <div className="custom-mobile:flex justify-between items-center mb-5">
+            <div className="custom-mobile:flex justify-between items-center mb-5 custom-tablet:flex">
               <button onClick={toggleNav}>
                 <img src={menu} alt="menu icon" />
               </button>

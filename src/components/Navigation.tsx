@@ -47,7 +47,10 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 style={{ width: "28px", height: "28px" }}
               />
               <Link to="/profile">
-                <a className="pl-[12px] mt-[2px]" href="#">
+                <a
+                  className="pl-[12px] mt-[2px] bg-blue-gradient bg-clip-text text-transparent"
+                  href="#"
+                >
                   Profile
                 </a>
               </Link>
@@ -59,7 +62,10 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 style={{ width: "28px", height: "28px" }}
               />{" "}
               <Link to="/weather">
-                <a className="pl-[12px] mt-[2px]" href="#">
+                <a
+                  className="pl-[12px] mt-[2px] bg-blue-gradient bg-clip-text text-transparent"
+                  href="#"
+                >
                   Weather
                 </a>
               </Link>
@@ -71,7 +77,10 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 style={{ width: "28px", height: "28px" }}
               />
               <Link to="/news">
-                <a className="pl-[12px] mt-[1px]" href="#">
+                <a
+                  className="pl-[12px] mt-[1px] bg-blue-gradient bg-clip-text text-transparent"
+                  href="#"
+                >
                   News
                 </a>
               </Link>
@@ -83,7 +92,10 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 style={{ width: "28px", height: "28px" }}
               />
               <Link to="/todlist">
-                <a className="pl-[11px] mt-[1px]" href="#">
+                <a
+                  className="pl-[11px] mt-[1px] bg-blue-gradient bg-clip-text text-transparent"
+                  href="#"
+                >
                   Todo-List
                 </a>
               </Link>
@@ -95,14 +107,20 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 style={{ width: "28px", height: "28px" }}
               />
               <Link to="/settings">
-                <a className="pl-[11px] mt-[2px]" href="#">
+                <a
+                  className="pl-[11px] mt-[2px] bg-blue-gradient bg-clip-text text-transparent"
+                  href="#"
+                >
                   Settings
                 </a>
               </Link>
             </li>
             <li className="flex">
               <img src={headset} alt="" />
-              <a className="pl-[11px] mt-[2px]" href="#">
+              <a
+                className="pl-[11px] mt-[2px] bg-blue-gradient bg-clip-text text-transparent"
+                href="#"
+              >
                 Support
               </a>
             </li>

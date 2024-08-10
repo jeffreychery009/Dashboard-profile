@@ -19,10 +19,10 @@ const ProfilePage = () => {
           User Profile
         </h2>
       </div>
-      <div className="card-style-profile">
+      <div className="card-style-profile custom-tablet:w-[80%] mx-auto">
         <div className="flex justify-center mt-[72px]">
           <img
-            className=" w-[120px] h-[120px] rounded-full"
+            className="w-[120px] h-[120px] rounded-full"
             src={profile}
             alt=""
           />
@@ -33,13 +33,13 @@ const ProfilePage = () => {
         <div className="flex justify-center">
           <p className="text-xs text-custom-text">Software Engineer</p>
         </div>
-        <div className="flex justify-between mt-[36px]">
+        <div className="flex justify-between mt-[36px] space-x-4 custom-tablet:space-x-2">
           {smallCards.map((cards) => (
-            <div className="w-[84px] h-[44px] rounded-[24px] ring-1 flex justify-center items-center bg-customBlue">
-              <div
-                className="text-center text-xs font-semibold bg-blue-gradient bg-clip-text text-transparent"
-                key={cards.id}
-              >
+            <div
+              key={cards.id}
+              className="w-[84px] h-[44px] rounded-[24px] ring-1 flex justify-center items-center bg-customBlue"
+            >
+              <div className="text-center text-xs font-semibold bg-blue-gradient bg-clip-text text-transparent">
                 {cards.text}
               </div>
             </div>

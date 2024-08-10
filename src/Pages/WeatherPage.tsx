@@ -36,7 +36,7 @@ const WeatherPage = () => {
       {weather &&
         weather.slice(0, 5).map((res, index) => (
           <div key={index}>
-            <div className="card-style mb-4">
+            <div className="card-style mb-4 custom-tablet:w-[80%] mx-auto">
               <div className="flex justify-between mb-3">
                 <h3 className="text-sm font-medium">Weather</h3>
               </div>

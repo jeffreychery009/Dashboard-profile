@@ -28,7 +28,7 @@ const NewsPage = () => {
   return (
     <>
       <div>
-        <div className="custom-mobile:flex justify-between items-center mb-[80px]">
+        <div className="custom-mobile:flex justify-between items-center mb-[80px] custom-tablet: flex">
           <button onClick={toggleNav}>
             <img src={Menu} alt="menu icon" />
           </button>
@@ -41,16 +41,21 @@ const NewsPage = () => {
         </div>
         <Navigation isOpen={isNavOpen} toggleNav={toggleNav} />
       </div>
-      <div className="mb-4">
-        <h2 className="text-md font-semibold">News</h2>
+      <div>
+        <h2 className="text-md font-semibold mb-4">News</h2>
       </div>
       <div>
         {news &&
           news.slice(0, 5).map((article, index) => (
-            <div key={index}>
-              <div className="card-style-news mb-10">
-                <h2 className="text-md font-medium mb-4">{article.title}</h2>
-                <p className="mb-10">{article.content}</p>
+            <div
+              key={index}
+              className="custom-tablet:flex custom-tablet:justify-center"
+            >
+              <div className="card-style-news mb-10  custom-tablet:mx-0">
+                <h2 className="text-md font-medium mb-4 custom-tablet:ml-4">
+                  {article.title}
+                </h2>
+                <p className="mb-10 custom-tablet:ml-4">{article.content}</p>
               </div>
             </div>
           ))}
