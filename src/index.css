@@ -18,6 +18,10 @@ body {
   @apply h-card-h w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
 }
 
+.card-style-todo {
+  @apply h-full w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300 overflow-hidden;
+}
+
 .card-style-news {
   @apply h-full w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300 overflow-hidden;
 }
@@ -32,6 +36,10 @@ body {
 
 .edit-input {
   @apply w-input-width h-input-add-height rounded-input-add-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
+}
+
+.textarea-input {
+  @apply w-input-width min-h-[150px] rounded-[12px] shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
 }
 
 .list-active {
