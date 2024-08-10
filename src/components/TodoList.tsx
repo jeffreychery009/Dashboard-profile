@@ -5,7 +5,7 @@ import profileImage from "../assets/ProfileImage.jpg";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
 
-interface TodoItem {
+export interface TodoItem {
   id: number;
   title: string;
   description: string;
@@ -24,6 +24,11 @@ const TodoList = () => {
   useEffect(() => {
     const storedTodoList = JSON.parse(localStorage.getItem("todoList") || "[]");
     setTodoList(storedTodoList);
+  }, []);
+
+  useEffect(() => {
+    // Scroll to the top of the page when this component is mounted
+    window.scrollTo(0, 0);
   }, []);
 
   return (
