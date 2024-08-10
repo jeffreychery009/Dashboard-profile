@@ -43,15 +43,23 @@ const TodoPage = () => {
           <img src={caretleft} alt="chevron" />
         </div>
       </Link>
-      <div className="mb-6">Create a New Task</div>
+      <div className="pl-2 text-lg font-medium mb-6 bg-blue-gradient bg-clip-text text-transparent">
+        Create a New Task
+      </div>
 
       <div>
-        <input ref={titleRef} className="edit-input mb-4" type="text" />
+        <input
+          ref={titleRef}
+          className="edit-input mb-4"
+          type="text"
+          placeholder="Task Title"
+        />
         <textarea
           ref={descRef}
-          className="textarea-input"
+          className="textarea-input pt-2"
           name=""
           id=""
+          placeholder="Task Description"
         ></textarea>
       </div>
       <div className="mt-4">
