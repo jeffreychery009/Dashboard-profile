@@ -5,6 +5,7 @@ import article from "../assets/article.svg";
 import listcheck from "../assets/list-checks.svg";
 import gear from "../assets/gear.svg";
 import headset from "../assets/headset.svg";
+import { Link } from "react-router-dom";
 
 // Definining NavigationProps interface
 
@@ -45,9 +46,11 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 alt=""
                 style={{ width: "28px", height: "28px" }}
               />
-              <a className="pl-[12px] mt-[2px]" href="#">
-                Profile
-              </a>
+              <Link to="/profile">
+                <a className="pl-[12px] mt-[2px]" href="#">
+                  Profile
+                </a>
+              </Link>
             </li>
             <li className="flex">
               <img
@@ -55,9 +58,11 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 alt="cloud"
                 style={{ width: "28px", height: "28px" }}
               />{" "}
-              <a className="pl-[12px] mt-[2px]" href="#">
-                Weather
-              </a>
+              <Link to="/weather">
+                <a className="pl-[12px] mt-[2px]" href="#">
+                  Weather
+                </a>
+              </Link>
             </li>
             <li className="flex">
               <img
@@ -65,9 +70,11 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 alt=""
                 style={{ width: "28px", height: "28px" }}
               />
-              <a className="pl-[12px] mt-[1px]" href="#">
-                News
-              </a>
+              <Link to="/news">
+                <a className="pl-[12px] mt-[1px]" href="#">
+                  News
+                </a>
+              </Link>
             </li>
             <li className="flex">
               <img
@@ -75,9 +82,11 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 alt=""
                 style={{ width: "28px", height: "28px" }}
               />
-              <a className="pl-[11px] mt-[1px]" href="#">
-                Todo-List
-              </a>
+              <Link to="/todlist">
+                <a className="pl-[11px] mt-[1px]" href="#">
+                  Todo-List
+                </a>
+              </Link>
             </li>
             <li className="flex">
               <img
@@ -85,9 +94,11 @@ const Navigation = ({ isOpen, toggleNav }: NavigationProps) => {
                 alt=""
                 style={{ width: "28px", height: "28px" }}
               />
-              <a className="pl-[11px] mt-[2px]" href="#">
-                Settings
-              </a>
+              <Link to="/settings">
+                <a className="pl-[11px] mt-[2px]" href="#">
+                  Settings
+                </a>
+              </Link>
             </li>
             <li className="flex">
               <img src={headset} alt="" />
