@@ -3,6 +3,9 @@ import chevron from "../assets/caret-left.svg";
 import profile from "../assets/ProfileImage.jpg";
 
 const ProfilePage = () => {
+
+  // Hard Coded User Information
+  
   const smallCards = [
     { id: 1, text: "Age: 23" },
     { id: 2, text: "Location" },
