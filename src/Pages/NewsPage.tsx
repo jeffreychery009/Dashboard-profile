@@ -10,6 +10,7 @@ const NewsPage = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false);
 
+  //Retrieving news data from API
   useEffect(() => {
     getNews()
       .then((res) => {
