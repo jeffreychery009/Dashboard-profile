@@ -6,8 +6,8 @@ export default {
     extend: {
       screens: {
         "custom-mobile": { min: "320px", max: "480px" },
-        "custom-tablet": { min: "481px", max: "768px" },
-        "custom-desktop": { min: "769px" },
+        "custom-tablet": { min: "481px", max: "900px" },
+        "custom-desktop": { min: "901px" },
       },
 
       spacing: {
@@ -46,6 +46,7 @@ export default {
         "custom-text": "#767474",
         "custome-active": "#D9D9D9",
         blue: "#0A42D4",
+        "light-gray": "#DADADA",
       },
 
       // Custom font-size
