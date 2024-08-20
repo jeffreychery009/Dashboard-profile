@@ -6,6 +6,7 @@ import NewsPage from "./Pages/NewsPage";
 import WeatherPage from "./Pages/WeatherPage";
 import TodoPage from "./Pages/TodoPage";
 import TodoList from "./components/TodoList";
+import EditTodo from "./components/EditTodoList";
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
   { path: "/weather", element: <WeatherPage /> },
   { path: "/todolist", element: <TodoList /> },
   { path: "/todolist/edit", element: <TodoPage /> },
+  { path: "/todolist/edit/:id", element: <EditTodo /> },
 ]);
 
 export default router;

@@ -7,7 +7,6 @@ import SettingsCard from "./Cards/SettingsCard";
 import TodoListCard from "./Cards/TodoListCard";
 import WeatherCard from "./Cards/WeatherCard";
 import Navigation from "./Navigation";
-import NavbarDesktop from "./Desktop/NavbarDesktop";
 
 const HomePage = () => {
   const user = "Jeffrey";
@@ -77,10 +76,6 @@ const HomePage = () => {
         <p className="text-center text-xs p-4 bg-blue-gradient bg-clip-text text-transparent">
           Copyright © Dashboard.io
         </p>
-      </div>
-
-      <div className="hidden custom-desktop:block">
-        <NavbarDesktop />
       </div>
     </>
   );

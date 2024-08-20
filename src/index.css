@@ -19,7 +19,7 @@ body {
 }
 
 .card-style-todo {
-  @apply h-full w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300 overflow-hidden;
+  @apply h-full w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300 overflow-visible;
 }
 
 .card-style-news {
@@ -36,6 +36,10 @@ body {
 
 .search-input {
   @apply w-full h-input-height rounded-input-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
+}
+
+.search-input-desktop {
+  @apply w-[300px] h-input-height rounded-input-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
 }
 
 .edit-input {
