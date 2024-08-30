@@ -6,8 +6,8 @@ export default {
     extend: {
       screens: {
         "custom-mobile": { min: "320px", max: "480px" },
-        "custom-tablet": { min: "481px", max: "760px" },
-        "custom-desktop": { min: "761px", max: "1024px" },
+        "custom-tablet": { min: "481px", max: "768px" },
+        "custom-desktop": { min: "769px", max: "1024px" },
         "custom-large-desktop": { min: "1025px" },
       },
 

@@ -5,9 +5,6 @@
 
 body {
   @apply bg-custom-bg;
-  @apply p-padding-top;
-  @apply p-padding-bottom;
-  @apply p-paddingX;
 }
 
 .h1-style {
@@ -28,6 +25,10 @@ body {
 
 .card-style-profile {
   @apply h-[380px] w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
+}
+
+.card-style-medium {
+  @apply h-[280px] w-[75%] rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
 }
 
 .card-style-profile-tablet {
