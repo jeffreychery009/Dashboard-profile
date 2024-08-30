@@ -3,6 +3,7 @@ import SideBar from "./SideBar";
 import MenuContext from "../Context/ContextProvider";
 
 import NavBar from "../NavBar";
+import DashboardCentral from "./DashboardCentral";
 
 const HomePage = () => {
   const [activeMenu, setActiveMenu] = useState(true);
@@ -19,8 +20,13 @@ const HomePage = () => {
             <SideBar />
           </div>
         )}
-        <div>
-          <NavBar />
+        <div className="flex flex-col ">
+          <div>
+            <NavBar />
+          </div>
+          <div className={`${activeMenu ? "ml-72" : "ml-0"} w-full h-screen `}>
+            <DashboardCentral />
+          </div>
         </div>
       </MenuContext.Provider>
     </div>
