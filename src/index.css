@@ -5,83 +5,16 @@
 
 body {
   @apply bg-custom-bg;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.h1-style {
-  @apply text-lg font-semibold bg-blue-gradient bg-clip-text bg-transparent text-transparent;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.card-style {
-  @apply h-card-h w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
-}
-
-.card-style-todo {
-  @apply h-full w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300 overflow-visible;
-}
-
-.card-style-news {
-  @apply h-full w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300 overflow-hidden;
-}
-
-.card-style-profile {
-  @apply h-[380px] w-card-w rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
-}
-
-.card-style-medium {
-  @apply h-[280px] w-[75%] rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
-}
-
-.card-style-profile-tablet {
-  @apply h-[380px] w-[80%] rounded-card-radius bg-white p-card-padding shadow-md ring-1 ring-gray-300;
-}
-
-.search-input {
-  @apply w-full h-input-height rounded-input-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
-}
-
-.search-input-desktop {
-  @apply w-[300px] h-input-height rounded-input-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
-}
-
-.edit-input {
-  @apply w-full h-input-add-height rounded-input-add-radius shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
-}
-
-.textarea-input {
-  @apply w-full min-h-[150px] rounded-[12px] shadow-md pl-4 text-gray-500 ring-1 ring-gray-300;
-}
-
-.list-active {
-  @apply bg-custome-active w-[100%] h-[52px] rounded-[16px];
-  display: flex;
-
-  align-items: center;
-}
-
-.gradient-border-light {
-  padding: 1px; /* Adjust padding to match border width */
-  border-radius: 40px; /* Your desired border-radius */
-  background: linear-gradient(to right, #f11919, #fc8619);
-  width: 92px;
-}
-
-.gradient-border-light > .content {
-  background: white; /* Background color of the inner content */
-  border-radius: 40px; /* Same as border-radius minus border width */
-  padding: 8px; /* Your desired padding inside the element */
-  height: 40px;
-}
-
-.gradient-border-dark {
-  padding: 1px; /* Adjust padding to match border width */
-  border-radius: 40px; /* Your desired border-radius */
-  background: linear-gradient(to right, #0a42d4, #20a2d9);
-  width: 92px;
-}
-
-.gradient-border-dark > .content {
-  background: white; /* Background color of the inner content */
-  border-radius: 40px; /* Same as border-radius minus border width */
-  padding: 8px; /* Your desired padding inside the element */
-  height: 40px;
+.no-scroll {
+  overflow: hidden;
 }
