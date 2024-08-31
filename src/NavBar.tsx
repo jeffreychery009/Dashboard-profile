@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
-
-import MenuContext from "./Context/ContextProvider";
+import { useEffect } from "react";
 import { MdOutlineMenu } from "react-icons/md";
+import { useStateContext } from "./Context/ContextProvider";
 
 const NavBar = () => {
-  const { activeMenu, setActiveMenu } = React.useContext(MenuContext);
+  const { activeMenu, setActiveMenu } = useStateContext();
 
   useEffect(() => {
     if (activeMenu) {

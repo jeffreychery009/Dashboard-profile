@@ -1,8 +1,7 @@
-import React from "react";
-import MenuContext from "../Context/ContextProvider";
+import { useStateContext } from "../Context/ContextProvider";
 
 const DashboardCentral = () => {
-  const { activeMenu } = React.useContext(MenuContext);
+  const { activeMenu } = useStateContext();
 
   return (
     <>
@@ -24,7 +23,7 @@ const DashboardCentral = () => {
             <div className="shadow-xl h-60 flex items-center justify-center p-4">
               <p>Card 4</p>
             </div>
-            <div className="shadow-xl h-60 flex items-center justify-center p-4 md:col-span-2 lg:col-span-2">
+            <div className="shadow-xl h-60 flex items-center justify-center p-4">
               <p>Card 5</p>
             </div>
           </div>

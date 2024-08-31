@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
+
 import Settings from "./Pages/Settings";
 import ProfilePage from "./Pages/ProfilePage";
 import NewsPage from "./Pages/NewsPage";
@@ -7,9 +7,10 @@ import WeatherPage from "./Pages/WeatherPage";
 import TodoPage from "./Pages/TodoPage";
 import TodoList from "./Pages/TodoList";
 import EditTodo from "./Pages/EditTodoList";
+import App from "./App";
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
+  { path: "/", element: <App /> },
   { path: "/settings", element: <Settings /> },
   { path: "/profile", element: <ProfilePage /> },
   { path: "/news", element: <NewsPage /> },

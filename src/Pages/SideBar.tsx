@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
 import { links } from "../DummyData";
 import { MdOutlineCancel } from "react-icons/md";
-import MenuContext from "../Context/ContextProvider";
+import { Link } from "react-router-dom";
+import { useStateContext } from "../Context/ContextProvider";
 
 const Sidebar = () => {
-  const { activeMenu, setActiveMenu } = useContext(MenuContext);
+  const { activeMenu, setActiveMenu } = useStateContext();
 
   return (
     <div>
@@ -29,12 +29,14 @@ const Sidebar = () => {
                   {link.title}
                 </p>
                 {link.links.map((subLink) => (
-                  <span
-                    key={subLink.name}
-                    className="flex items-center gap-5 pl-4 pt-3 pb-2.5 capitalize font-light"
-                  >
-                    {subLink.name}
-                  </span>
+                  <Link to={`/${subLink.link}`}>
+                    <span
+                      key={subLink.name}
+                      className="flex items-center gap-5 pl-4 pt-3 pb-2.5 capitalize font-light"
+                    >
+                      {subLink.name}
+                    </span>
+                  </Link>
                 ))}
               </div>
             ))}

@@ -30,8 +30,9 @@ export const links = [
     title: "Dashboard",
     links: [
       {
-        name: "homepage",
+        name: "Homepage",
         icon: "hi",
+        link: "",
       },
     ],
   },
@@ -41,18 +42,22 @@ export const links = [
       {
         name: "weather",
         icon: "hi",
+        link: "weather",
       },
       {
         name: "todo-list",
         icon: "hi",
+        link: "todo-list",
       },
       {
         name: "news",
         icon: "hi",
+        link: "news",
       },
       {
-        name: "profile",
+        name: "Contact",
         icon: "hi",
+        link: "contact",
       },
     ],
   },
@@ -63,10 +68,12 @@ export const links = [
       {
         name: "settings",
         icon: "hi",
+        link: "settings",
       },
       {
         name: "support",
         icon: "hi",
+        link: "support",
       },
     ],
   },
