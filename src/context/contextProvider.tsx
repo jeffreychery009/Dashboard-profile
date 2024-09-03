@@ -7,14 +7,14 @@ import {
   useState,
 } from "react";
 
-// Define the shape of Props
+// Define the shape of Props for active Meny
 
 interface ContextProps {
   activeMenu: boolean;
   setActiveMenu: Dispatch<SetStateAction<boolean>>;
 }
 
-// Export the Context
+// Export the Menu Context
 
 export const StateContext = createContext<ContextProps>({
   activeMenu: true,
