@@ -3,3 +3,4 @@ export { default as Dashboard } from "./Dashboard";
 export { default as News } from "./News";
 export { default as TodoPage } from "./TodoPage";
 export { default as Weather } from "./Weather";
+export { default as Settings } from "./Settings";

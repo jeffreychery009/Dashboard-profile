@@ -44,11 +44,17 @@ export const getWeatherData = async (
       return error;
     });
 };
-
 // Defining a function for displaying multiple common cities weather
 
 export const getWeather = async (): Promise<WeatherPropsData[]> => {
-  const cities = ["New York", "Toronto", "Atlanta", "Dallas", "Vancouver"];
+  const cities = [
+    "New York",
+    "Toronto",
+    "Atlanta",
+    "Dallas",
+    "Vancouver",
+    "Miami",
+  ];
   const apiKey = "2e7e17f091f9429aafe72537243107";
 
   // Create an array of Promises for each city's weather data
