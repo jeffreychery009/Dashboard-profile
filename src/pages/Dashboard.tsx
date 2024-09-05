@@ -45,26 +45,37 @@ const Dashboard = () => {
                 Weather
               </p>
               <span className="text-sm text-blue-400 font-light dark:text-blue-100">
-                View the weather in the most common cities of the U.S
+                View the weather in the most common cities of the world!
               </span>
             </div>
           </div>
 
           <div className="bg-white shadow-md p-5 rounded-lg   hover:shadow-lg transition-shadow dark:bg-gray-900">
             <div>
-              {todos.slice(0, 1).map((todo, i) => (
-                <div className="flex flex-col" key={i}>
-                  <span className="text-2xl font-medium dark:text-gray-100">
-                    Task: {todo.title}
+              {todos.length === 0 ? (
+                <div className="flex flex-col ">
+                  <span className="text-2xl font-medium dark:text-gray-100 mb-16">
+                    No tasks available
                   </span>
-                  <span className="text-sm text-gray-400 font-light dark:text-gray-300">
-                    {todo.description}
-                  </span>
-                  <span className="mt-10 font-light text-blue-500 text-sm dark:text-blue-100">
-                    View all your other tasks
+                  <span className="text-sm text-gray-400 font-light dark:text-blue-100">
+                    Please add a task to get started.
                   </span>
                 </div>
-              ))}
+              ) : (
+                todos.slice(0, 1).map((todo, i) => (
+                  <div className="flex flex-col" key={i}>
+                    <span className="text-2xl font-medium dark:text-gray-100">
+                      Task: {todo.title}
+                    </span>
+                    <span className="text-sm text-gray-400 font-light dark:text-gray-300">
+                      {todo.description}
+                    </span>
+                    <span className="mt-10 font-light text-blue-500 text-sm dark:text-blue-100">
+                      View all your other tasks
+                    </span>
+                  </div>
+                ))
+              )}
             </div>
           </div>
           <div className="bg-white shadow-md p-5 rounded-lg  hover:shadow-lg transition-shadow dark:bg-gray-900">

@@ -54,6 +54,12 @@ export const getWeather = async (): Promise<WeatherPropsData[]> => {
     "Dallas",
     "Vancouver",
     "Miami",
+    "Los Angeles",
+    "Chicago",
+    "London",
+    "Paris",
+    "Berlin",
+    "Tokyo",
   ];
   const apiKey = "2e7e17f091f9429aafe72537243107";
 

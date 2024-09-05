@@ -124,7 +124,7 @@ const TodoPage: React.FC = () => {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-6">
           {todos.map((todo) => (
             <div
-              className={`bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ml-4 dark:bg-gray-900 ${
+              className={` p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ml-4 dark:bg-gray-900 ${
                 todo.completed
                   ? "bg-green-500 dark:bg-green-800 text-white"
                   : ""
@@ -147,19 +147,19 @@ const TodoPage: React.FC = () => {
               </p>
               <div className="flex justify-between flex-wrap gap-2">
                 <button
-                  className="bg-purple-800 rounded-md text-white px-3 py-1 w-full sm:w-[120px] lg:w-auto font-light"
+                  className="bg-purple-800 rounded-md text-white px-3 py-1 w-full sm:w-[100px] md:w-[120px] lg:w-auto font-light"
                   onClick={() => deleteTodo(todo.id)}
                 >
                   Delete
                 </button>
                 <button
-                  className="bg-green-700 rounded-md text-white px-3 py-1 w-full sm:w-[120px] lg:w-auto font-light"
+                  className="bg-green-700 rounded-md text-white px-3 py-1 w-full sm:w-[100px] md:w-[120px] lg:w-auto font-light"
                   onClick={() => toggleTodo(todo.id)}
                 >
                   Complete
                 </button>
                 <button
-                  className="bg-gradient-to-r from-[#0A42D4] to-[#20A2D9] rounded-md text-white px-3 py-1 w-full sm:w-[120px] lg:w-auto font-light"
+                  className="bg-gradient-to-r from-[#0A42D4] to-[#20A2D9] rounded-md text-white px-3 py-1 w-full sm:w-[100px] md:w-[120px] lg:w-auto font-light"
                   onClick={() => handleOpenModal(todo)}
                 >
                   Update
