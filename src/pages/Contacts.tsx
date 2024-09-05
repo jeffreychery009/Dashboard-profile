@@ -8,9 +8,13 @@ const Contacts = () => {
     <>
       <div>
         <div className=" max-w-80 mb-10 ">
-          <div className="bg-white shadow-md p-5 m-5 rounded-lg ">
-            <h1 className="font-bold md:text-2xl">Contacts</h1>
-            <p className="text-gray-500">Welcome to your contacts</p>
+          <div className="bg-white shadow-md p-5 m-5 rounded-lg dark:bg-gray-900 ">
+            <h1 className="font-bold md:text-2xl dark:text-gray-100">
+              Contacts
+            </h1>
+            <p className="text-gray-500 dark:text-gray-400">
+              Welcome to your contacts
+            </p>
           </div>
         </div>
         <div className="mb-20">
@@ -32,9 +36,9 @@ const Contacts = () => {
             .map((contact) => (
               <div
                 key={contact.id}
-                className="bg-white p-4 shadow-md rounded-md"
+                className="bg-white p-4 shadow-md rounded-md dark:bg-gray-900"
               >
-                <h1 className="text-xl font-medium">
+                <h1 className="text-xl font-medium dark:text-gray-100">
                   {contact.first_name} {contact.last_name}
                 </h1>
                 <p className="text-gray-400">{contact.email}</p>

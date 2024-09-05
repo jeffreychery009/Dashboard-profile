@@ -64,12 +64,16 @@ const TodoPage: React.FC = () => {
   return (
     <>
       <div>
-        <div className="bg-white shadow-md p-5 m-5 rounded-lg max-w-80">
-          <h1 className="font-bold md:text-2xl">Todo List</h1>
-          <p className="text-gray-500">Welcome to the Todo List</p>
+        <div className="bg-white shadow-md p-5 m-5 rounded-lg max-w-80 dark:bg-gray-900">
+          <h1 className="font-bold md:text-2xl dark:text-gray-100">
+            Todo List
+          </h1>
+          <p className="text-gray-500 dark:text-gray-300">
+            Welcome to the Todo List
+          </p>
         </div>
         <button
-          className="ml-5 p-2 bg-white rounded-lg shadow-md hover:bg-gray-400 hover:text-white"
+          className="ml-5 p-2 bg-white rounded-lg shadow-md hover:bg-gray-400 hover:text-white dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-gray-100"
           onClick={() => setIsModalOpen(true)}
         >
           New Task+
@@ -79,8 +83,8 @@ const TodoPage: React.FC = () => {
       {/* Modal for Adding or Updating a Task */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-7 rounded-lg shadow-lg max-w-md w-full">
-            <h2 className="text-2xl font-medium mb-4">
+          <div className="bg-white p-7 rounded-lg shadow-lg max-w-md w-full dark:bg-gray-900">
+            <h2 className="text-2xl font-medium mb-4 dark:text-gray-100">
               {currentTodo.id !== null ? "Update Task" : "Add New Task"}
             </h2>
             <input
@@ -120,20 +124,22 @@ const TodoPage: React.FC = () => {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-6">
           {todos.map((todo) => (
             <div
-              className={`bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ml-4 ${
-                todo.completed ? "bg-green-500 text-white" : ""
+              className={`bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ml-4 dark:bg-gray-900 ${
+                todo.completed
+                  ? "bg-green-500 dark:bg-green-800 text-white"
+                  : ""
               }`}
               key={todo.id}
             >
               <h1
-                className={`text-xl font-medium mb-3 ${
+                className={`text-xl font-medium mb-3 dark:text-gray-100 ${
                   todo.completed ? "text-white" : ""
                 }`}
               >
                 {todo.title}
               </h1>
               <p
-                className={`text-sm mb-6 ${
+                className={`text-sm mb-6 dark:text-gray-300 ${
                   todo.completed ? "text-white" : "text-gray-500"
                 }`}
               >

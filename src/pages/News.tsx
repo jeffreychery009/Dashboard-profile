@@ -21,20 +21,26 @@ const News = () => {
 
   return (
     <>
-      <div className="bg-white p-5 m-5 shadow-md rounded-lg max-w-80 ">
-        <h1 className="text-xl font-medium">Read the News</h1>
-        <p className="text-gray-500 text-sm">Read different news articles</p>
+      <div className="bg-white p-5 m-5 shadow-md rounded-lg max-w-80 dark:bg-gray-900">
+        <h1 className="text-xl font-medium dark:text-gray-100">
+          Read the News
+        </h1>
+        <p className="text-gray-500 text-sm dark:text-gray-400">
+          Read different news articles
+        </p>
       </div>
       <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-2 lg:grid-cols-3">
         {news?.slice(0, 40).map((item, i) => (
           <div
             key={i}
-            className="bg-white rounded-lg shadow-md p-6 transition-transform transform hover:scale-105"
+            className="bg-white rounded-lg shadow-md p-6 transition-transform transform hover:scale-105 dark:bg-gray-900"
           >
-            <h2 className="text-xl font-semibold text-gray-800 mb-3">
+            <h2 className="text-xl font-semibold text-gray-800 mb-3 dark:text-gray-100">
               {item.title}
             </h2>
-            <p className="text-gray-600 line-clamp-3">{item.content}</p>
+            <p className="text-gray-600 line-clamp-3 dark:text-gray-400">
+              {item.content}
+            </p>
           </div>
         ))}
       </div>

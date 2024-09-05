@@ -18,10 +18,12 @@ const SideBar = () => {
       {activeMenu && (
         <div className="z-50 ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 border-r-[1px] border-gray-400">
           <div className="flex justify-between items-center p-4">
-            <h1 className="text-2xl font-medium mx-auto">Dashboard.io</h1>
+            <h1 className="text-2xl font-medium mx-auto dark:text-gray-100">
+              Dashboard.io
+            </h1>
             <button
               onClick={() => setActiveMenu(!activeMenu)}
-              className="hover:bg-slate-300 rounded-full"
+              className="hover:bg-slate-300 rounded-full dark:text-white"
             >
               <MdOutlineCancel />
             </button>
