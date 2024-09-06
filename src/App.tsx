@@ -9,7 +9,7 @@ import {
   Settings,
 } from "./pages/index";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useStateContext } from "./context/contextProvider";
+import { useStateContext } from "./context/menuProvider";
 import { ThemeProvider } from "./context/themeProvider";
 
 const App = () => {

@@ -57,7 +57,7 @@ const Dashboard = () => {
                   <span className="text-2xl font-medium dark:text-gray-100 mb-16">
                     No tasks available
                   </span>
-                  <span className="text-sm text-gray-400 font-light dark:text-blue-100">
+                  <span className="text-sm text-blue-400 font-light dark:text-blue-100">
                     Please add a task to get started.
                   </span>
                 </div>
@@ -104,7 +104,8 @@ const Dashboard = () => {
                 Settings
               </p>
               <span className="font-light text-blue-400 text-sm dark:text-blue-100">
-                Customize your dashboard
+                Customize your dashboard by changing the theme to Dark mode or
+                Light mode
               </span>
             </div>
           </div>

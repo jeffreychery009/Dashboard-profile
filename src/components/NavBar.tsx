@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { IoIosMenu } from "react-icons/io";
-import { useStateContext } from "../context/contextProvider";
+import { useStateContext } from "../context/menuProvider";
 
 const NavBar = () => {
   const { activeMenu, setActiveMenu } = useStateContext();
