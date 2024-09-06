@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 
 // Defining the shape of the theme context
 interface ThemeContextProps {
@@ -9,6 +9,7 @@ interface ThemeContextProps {
 // Creating the context using the shape defined above
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useThemeContext = () => {
   const context = useContext(ThemeContext);
   if (!context) {

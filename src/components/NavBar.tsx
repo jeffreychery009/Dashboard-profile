@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { useStateContext } from "../context/menuProvider";
 
@@ -16,7 +16,7 @@ const NavBar = () => {
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [activeMenu, setActiveMenu]);
 
   return (
     <>

@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useState,
-  ReactNode,
-  FC,
-  useEffect,
-} from "react";
+import { createContext, useState, ReactNode, FC, useEffect } from "react";
 
 export interface Todo {
   id: number;

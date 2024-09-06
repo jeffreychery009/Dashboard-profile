@@ -1,4 +1,3 @@
-import React from "react";
 import { links } from "../data/DummyData";
 import { MdOutlineCancel } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";

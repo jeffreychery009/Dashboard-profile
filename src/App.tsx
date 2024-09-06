@@ -1,4 +1,3 @@
-import React from "react";
 import { NavBar, SideBar } from "./components/index";
 import {
   Contacts,
