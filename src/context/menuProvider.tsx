@@ -26,7 +26,7 @@ type ContextProviderProps = {
 };
 
 export const ContextProvider = ({ children }: ContextProviderProps) => {
-  const [activeMenu, setActiveMenu] = useState(true);
+  const [activeMenu, setActiveMenu] = useState(false);
 
   return (
     <StateContext.Provider value={{ activeMenu, setActiveMenu }}>

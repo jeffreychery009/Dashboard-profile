@@ -6,14 +6,12 @@ const NavBar = () => {
   const { activeMenu, setActiveMenu } = useStateContext();
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 769 && activeMenu) {
-        setActiveMenu(true);
-      }
-    };
-    window.addEventListener("resize", handleResize);
+    const handleResize = () => {};
 
+    // Run handleResize when the component mounts to set activeMenu to false on page refresh if needed
     handleResize();
+
+    window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, [activeMenu, setActiveMenu]);
