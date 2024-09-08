@@ -18,7 +18,7 @@ const SettingsPage: React.FC = () => {
           onClick={toggleTheme}
           className="bg-gradient-to-r from-[#0A42D4] to-[#20A2D9] text-white py-2 px-4 rounded"
         >
-          {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+          {theme === "light" ? "Dark Mode" : "Light Mode"}
         </button>
       </div>
     </div>

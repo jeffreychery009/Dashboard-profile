@@ -8,7 +8,7 @@ const NavBar = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 769 && activeMenu) {
-        setActiveMenu(!true);
+        setActiveMenu(true);
       }
     };
     window.addEventListener("resize", handleResize);
