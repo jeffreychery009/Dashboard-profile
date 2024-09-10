@@ -10,10 +10,15 @@ export interface NewsProps {
 export const getNews = async (): Promise<NewsProps[]> => {
   // Using the News API key from the environment variable
   const API = import.meta.env.VITE_NEWS_API_KEY;
-  const url = `https://newsapi.org/v2/everything?q=keyword&apiKey=${API}`; // Direct API call for production
+
+  // Define API URL based on environment
+  const baseURL =
+    import.meta.env.MODE === "development"
+      ? "/api/news?q=keyword" // Proxy used in development
+      : `https://newsapi.org/v2/everything?q=keyword&apiKey=${API}`; // Direct API call in production
 
   // Using axios to fetch data from the API
-  return axios.get(url).then((res) => {
+  return axios.get(baseURL).then((res) => {
     const data = res.data.articles;
     const newsData: NewsProps[] = data.map((article: NewsProps) => {
       return {
