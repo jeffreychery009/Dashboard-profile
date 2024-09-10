@@ -124,7 +124,7 @@ const TodoPage: React.FC = () => {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-6">
           {todos.map((todo) => (
             <div
-              className={` p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ml-4 dark:bg-gray-900 ${
+              className={`bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 ml-4 dark:bg-gray-900 ${
                 todo.completed
                   ? "bg-green-500 dark:bg-green-800 text-white"
                   : ""

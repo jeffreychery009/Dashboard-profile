@@ -41,7 +41,7 @@ const Contacts = () => {
                 <h1 className="text-xl font-medium dark:text-gray-100">
                   {contact.first_name} {contact.last_name}
                 </h1>
-                <p className="text-gray-400">{contact.email}</p>
+                <p className="text-gray-400 overflow-hidden">{contact.email}</p>
                 <p className="text-gray-400">{contact.phone_number}</p>
               </div>
             ))}
