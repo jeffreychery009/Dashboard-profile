@@ -5,7 +5,16 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true, // This allows the server to be accessed externally
-    port: 5173, // You can change the port if needed
+    host: true,
+    port: 5173,
+
+    // Defining the proxy so it can be used under different IP Addresses
+    proxy: {
+      "/api/news": {
+        target: "https://newsapi.org",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/news/, "/v2/everything"),
+      },
+    },
   },
 });
