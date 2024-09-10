@@ -21,7 +21,8 @@ export const getWeatherData = async (
   lat: number,
   lon: number
 ): Promise<WeatherPropsData> => {
-  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+
   const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}&days=1`;
 
   // Using axios to fetch data from the API, then returning the data as a response, and catching any errors
@@ -61,7 +62,7 @@ export const getWeather = async (): Promise<WeatherPropsData[]> => {
     "Berlin",
     "Tokyo",
   ];
-  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
   // Create an array of Promises for each city's weather data
   const weatherPromises = cities.map(async (city) => {
