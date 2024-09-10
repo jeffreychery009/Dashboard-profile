@@ -19,11 +19,13 @@ export const useThemeContext = () => {
 };
 
 // Defining the provider to be wrapped around the app component
+// Setting it in local storage to persist the theme
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<"light" | "dark">(
     () => (localStorage.getItem("theme") as "light" | "dark") || "light"
   );
 
+  // Function to toggle the theme
   const toggleTheme = () => {
     setTheme((prevTheme) => {
       const newTheme = prevTheme === "light" ? "dark" : "light";

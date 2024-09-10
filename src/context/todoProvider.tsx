@@ -1,12 +1,13 @@
 import { createContext, useState, ReactNode, FC, useEffect } from "react";
 
+// Defining the shape of the todo context
 export interface Todo {
   id: number;
   title: string;
   description: string;
   completed: boolean;
 }
-
+// Creating the context using the shape defined above
 interface TodoContextType {
   todos: Todo[];
   addTodo: (todo: Todo) => void;
@@ -22,7 +23,7 @@ export const TodoContext = createContext<TodoContextType | undefined>(
 interface TodoProviderProps {
   children: ReactNode;
 }
-
+// Creating the provider to be wrapped around the app component and adding the todos to local storage
 export const TodoProvider: FC<TodoProviderProps> = ({ children }) => {
   const [todos, setTodos] = useState<Todo[]>(() => {
     const savedTodos = localStorage.getItem("todos");
@@ -33,6 +34,7 @@ export const TodoProvider: FC<TodoProviderProps> = ({ children }) => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
+  // Functions to add, delete, update and toggle todos
   const addTodo = (todo: Todo) => {
     setTodos([...todos, todo]);
   };
