@@ -8,11 +8,11 @@ export interface NewsProps {
 
 // Function to fetch the news
 export const getNews = async (): Promise<NewsProps[]> => {
-  // Use the proxy path instead of the full API URL
+  // Using the News API key from the environment variable
   const API = import.meta.env.VITE_NEWS_API_KEY;
-  const url = `/api/news?q=keyword&apiKey=${API}`; // Use proxy path
+  const url = `https://newsapi.org/v2/everything?q=keyword&apiKey=${API}`; // Direct API call for production
 
-  // Using axios to fetch data from the API, then returning the data as a response
+  // Using axios to fetch data from the API
   return axios.get(url).then((res) => {
     const data = res.data.articles;
     const newsData: NewsProps[] = data.map((article: NewsProps) => {
