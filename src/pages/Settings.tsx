@@ -12,7 +12,7 @@ const SettingsPage: React.FC = () => {
 
       <div className="flex items-center justify-between">
         <span className="text-lg font-medium text-gray-900 dark:text-gray-100">
-          Toggle Dark Mode
+          {theme === "light" ? "Toggle Dark Mode" : "Toggle Light Mode"}
         </span>
         <button
           onClick={toggleTheme}
