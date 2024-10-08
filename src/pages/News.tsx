@@ -16,7 +16,13 @@ const News = () => {
   }, []);
 
   if (error) {
-    return <div>{error}</div>;
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <div className="text-center text-2xl text-red-600 bg-red-100 border border-red-400 p-4 rounded-md shadow-md">
+          <strong>Error:</strong> {error}
+        </div>
+      </div>
+    );
   }
 
   return (
